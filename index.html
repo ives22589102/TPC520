@@ -24,6 +24,17 @@
             background-color: #0f0e17; /* 深色電競背景 */
         }
         
+        .hero-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+        
         /* 背景圖片樣式 */
         .hero-image {
             position: absolute;
@@ -50,16 +61,22 @@
         /* 主標題樣式 - 像素風文字 */
         .hero-title {
             font-family: 'Press Start 2P', cursive, sans-serif; /* 經典像素字體 */
-            color: #ff69b4; /* 粉紅色 */
+            color: #ff8fab; /* 粉紅色 */
             text-shadow: 
                 4px 4px 0 #ff1493,
                 8px 8px 0 rgba(0, 0, 0, 0.3);
-            font-size: clamp(2rem, 8vw, 5rem);
+            font-size: clamp(2rem, 4vw, 5rem);
             margin-bottom: 1.5rem;
             line-height: 1.2;
             animation: glitch 1s linear infinite;
+            text-shadow: 
+        3px 3px 0 #000,
+        0 0 15px #ff1493;
+    
         }
-        
+   
+
+
         /* 副標題樣式 */
         .hero-subtitle {
             color: #fff;
@@ -86,7 +103,10 @@
                 0 0 0 2px white,
                 0 0 0 4px #ff1493;
             animation: pulse 2s infinite;
+            
         }
+        
+        
         
         .cta-button:hover {
             background: linear-gradient(45deg, #ff69b4, #ff1493);
@@ -122,6 +142,8 @@
                 font-size: 0.8rem;
             }
         }
+
+        
     </style>
     
     <!-- 載入像素風字體 -->
@@ -130,12 +152,12 @@
 <body>
     <section class="hero-banner">
         <!-- 背景圖片 -->
-        <img src="./img/herobanner.png" alt="520 電競情人節 Banner" class="hero-image">
+        <img src="./img/banner/kv.jpg" alt="520 電競情人節 Banner" class="hero-image">
         
         <!-- 文字內容 -->
         <div class="hero-content">
-            <h1 class="hero-title">520 PRESS START TO LOVE</h1>
-            <p class="hero-subtitle">登錄抽限定電競情侶周邊 • 消費滿額再贈好禮</p>
+            <h1 class="hero-title">PRESS START TO LOVE</h1>
+            <p class="hero-subtitle">【情不自競】</br> 成功完成關卡即有機會抽中 ROG 萬元水冷免單、Foodpanda 折扣券及各式千元好禮，再享多項組合折扣價。</p>
             <a href="#signup" class="cta-button">START</a>
         </div>
     </section>
